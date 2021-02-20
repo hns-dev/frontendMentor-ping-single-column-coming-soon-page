@@ -54,7 +54,7 @@ header .logo {
 
 .container {
   width: 85%;
-  max-width: 650px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -70,8 +70,8 @@ header .logo {
 }
 
 .container p {
-  font-size: 14px;
-  margin: 1.2em 0;
+  font-size: 0.9rem;
+  margin: 1em 0;
   color: #151f29;
 }
 
@@ -172,5 +172,30 @@ footer .copyright {
 .attribution a {
   color: #4f7df3;
   font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+  .container form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+    gap: 0.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container form .form-control {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

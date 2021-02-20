@@ -64,7 +64,7 @@ header {
 
 .container {
   width: 85%;
-  max-width: 650px;
+  max-width: 500px;
   margin: 0 auto;
 
   h1 {
@@ -79,8 +79,8 @@ header {
   }
 
   p {
-    font-size: 14px;
-    margin: 1.2em 0;
+    font-size: 0.9rem;
+    margin: 1em 0;
     color: $dark-blue;
   }
 
@@ -159,4 +159,29 @@ footer {
   //   color: hsl(228, 45%, 44%);
   color: $blue;
   font-weight: 600;
+}
+
+// Media Queries
+@media (min-width: 600px) {
+  .container {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+
+      .form-control {
+        margin: 0;
+      }
+    }
+  }
 }
