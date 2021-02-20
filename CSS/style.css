@@ -26,7 +26,7 @@ h1 {
 }
 
 body {
-  font-family: "Libre Franklin";
+  font-family: "Libre Franklin", sans-serif;
   font-size: 20px;
   line-height: 1.6;
   min-height: 100vh;
@@ -79,10 +79,6 @@ header .logo {
   margin: 1.6em 0 2em;
 }
 
-.container form .form-control {
-  margin-bottom: 0.5em;
-}
-
 .container form input,
 .container form .btn {
   width: 100%;
@@ -94,6 +90,7 @@ header .logo {
 .container form input {
   border: 1px solid #c2d3ff;
   color: #151f29;
+  outline: #c2d3ff;
 }
 
 .container form input::-webkit-input-placeholder {
@@ -112,7 +109,36 @@ header .logo {
   color: #c2d3ff;
 }
 
+.container form input:-webkit-autofill,
+.container form input:-webkit-autofill:hover,
+.container form input:-webkit-autofill:focus,
+.container form textarea:-webkit-autofill,
+.container form textarea:-webkit-autofill:hover,
+.container form textarea:-webkit-autofill:focus,
+.container form select:-webkit-autofill,
+.container form select:-webkit-autofill:hover,
+.container form select:-webkit-autofill:focus,
+.container form input:valid {
+  border: 1px solid #c2d3ff;
+  -webkit-text-fill-color: #151f29;
+}
+
+.container form input.error-border {
+  border: 1px solid #ff5263;
+}
+
+.container form .error-msg {
+  color: #ff5263;
+  font-size: 0.8rem;
+  font-style: italic;
+  display: block;
+  width: inherit;
+  margin: 0.5em 0 1em;
+  font-family: "Libre Franklin";
+}
+
 .container form .btn {
+  cursor: pointer;
   background: #4f7df3;
   outline: #4f7df3;
   border: none;
@@ -120,6 +146,12 @@ header .logo {
           box-shadow: 0px 7px 10px 1px rgba(79, 125, 243, 0.3);
   color: white;
   font-weight: 600;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.container form .btn:hover {
+  opacity: 0.89;
 }
 
 .container .illustration {
@@ -190,12 +222,15 @@ footer .copyright {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .container form .form-control {
     margin: 0;
+  }
+  .container form .error-msg {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */

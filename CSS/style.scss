@@ -42,7 +42,7 @@ h1 {
 }
 
 body {
-  font-family: $font-family;
+  font-family: $font-family, sans-serif;
   font-size: $font-size;
   line-height: 1.6;
   min-height: 100vh;
@@ -87,9 +87,9 @@ header {
   form {
     margin: 1.6em 0 2em;
 
-    .form-control {
-      margin-bottom: 0.5em;
-    }
+    // .form-control {
+    //   margin-bottom: 0.5em;
+    // }
 
     input,
     .btn {
@@ -102,19 +102,56 @@ header {
     input {
       border: 1px solid $pale-blue;
       color: $dark-blue;
+      outline: $pale-blue;
     }
 
     input::placeholder {
       color: $pale-blue;
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus,
+    input:valid {
+      border: 1px solid $pale-blue;
+      -webkit-text-fill-color: $dark-blue;
+      //   transition: background-color 5000s ease-in-out 0s;
+    }
+
+    input.error-border {
+      border: 1px solid $light-red;
+    }
+
+    .error-msg {
+      color: $light-red;
+      font-size: 0.8rem;
+      font-style: italic;
+      display: block;
+      width: inherit;
+      margin: 0.5em 0 1em;
+      font-family: $font-family;
+    }
+
     .btn {
+      cursor: pointer;
       background: $blue;
       outline: $blue;
       border: none;
       box-shadow: 0px 7px 10px 1px rgba(79, 125, 243, 0.3);
       color: white;
       font-weight: 600;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .btn:hover {
+      //   background: $pale-blue;
+      opacity: 0.89;
     }
   }
 
@@ -177,10 +214,14 @@ footer {
       grid-template-columns: 70% 30%;
       gap: 0.5rem;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
 
       .form-control {
         margin: 0;
+      }
+
+      .error-msg {
+        text-align: left;
       }
     }
   }
