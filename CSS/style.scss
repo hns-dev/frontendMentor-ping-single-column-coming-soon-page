@@ -24,10 +24,139 @@ $font-family: "Libre Franklin";
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  line-height: 1;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1.6;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  margin-top: 2.5em;
+
+  .logo {
+    width: 58px;
+    height: 18px;
+  }
+}
+
+.container {
+  width: 85%;
+  max-width: 650px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $gray;
+
+    .soon {
+      color: $dark-blue;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin: 1.2em 0;
+    color: $dark-blue;
+  }
+
+  form {
+    margin: 1.6em 0 2em;
+
+    .form-control {
+      margin-bottom: 0.5em;
+    }
+
+    input,
+    .btn {
+      width: 100%;
+      border-radius: 55px;
+      padding: 1.1em 2.5em;
+      font-family: $font-family;
+    }
+
+    input {
+      border: 1px solid $pale-blue;
+      color: $dark-blue;
+    }
+
+    input::placeholder {
+      color: $pale-blue;
+    }
+
+    .btn {
+      background: $blue;
+      outline: $blue;
+      border: none;
+      box-shadow: 0px 7px 10px 1px rgba(79, 125, 243, 0.3);
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .illustration {
+    margin: 4em 0 6em;
+  }
+}
+
+footer {
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+
+    a {
+      color: $blue;
+      border: 0.3px solid $pale-blue;
+      border-radius: 50%;
+      margin: 0 0.5em;
+      height: 35px;
+      width: 35px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+    }
+  }
+
+  .copyright {
+    color: $gray;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 0.7rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  //   color: hsl(228, 45%, 44%);
+  color: $blue;
+  font-weight: 600;
 }
