@@ -71,7 +71,7 @@ header .logo {
 
 .container p {
   font-size: 0.9rem;
-  margin: 1em 0;
+  margin: 1.3em 0;
   color: #151f29;
 }
 
@@ -83,7 +83,7 @@ header .logo {
 .container form .btn {
   width: 100%;
   border-radius: 55px;
-  padding: 1.1em 2.5em;
+  padding: 1.3em 2.5em;
   font-family: "Libre Franklin";
 }
 
@@ -159,7 +159,7 @@ header .logo {
 }
 
 .container .illustration {
-  margin: 4em 0 6em;
+  margin: 3em 0 4em;
 }
 
 footer .social-links {
@@ -180,8 +180,8 @@ footer .social-links a {
   border: 0.3px solid #c2d3ff;
   border-radius: 50%;
   margin: 0 0.5em;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -191,7 +191,7 @@ footer .social-links a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 footer .copyright {
@@ -211,6 +211,10 @@ footer .copyright {
 }
 
 @media (min-width: 600px) {
+  header .logo {
+    width: 80px;
+    height: 20px;
+  }
   .container h1 {
     font-size: 2rem;
   }
@@ -229,9 +233,6 @@ footer .copyright {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-  }
-  .container form .form-control {
-    margin: 0;
   }
   .container form .error-msg {
     text-align: left;
