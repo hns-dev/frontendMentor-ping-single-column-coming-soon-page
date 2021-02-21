@@ -103,6 +103,7 @@ header {
       border: 1px solid $pale-blue;
       color: $dark-blue;
       outline: $pale-blue;
+      background: transparent;
     }
 
     input::placeholder {
@@ -121,11 +122,13 @@ header {
     input:valid {
       border: 1px solid $pale-blue;
       -webkit-text-fill-color: $dark-blue;
-      //   transition: background-color 5000s ease-in-out 0s;
+      background-color: white;
+      transition: background-color 5000s ease-in-out 0s;
     }
 
     input.error-border {
       border: 1px solid $light-red;
+      // background: white;
     }
 
     .error-msg {
@@ -222,6 +225,7 @@ footer {
 
       .error-msg {
         text-align: left;
+        padding-left: 2.2em;
       }
     }
   }
